@@ -93,7 +93,8 @@ class LoadingContainerState extends State<LoadingContainer> {
                   )
                 : null,
             _status?.isNotEmpty == true
-                ? Text(
+                ? Material(
+                    child: Text(
                     _status,
                     style: TextStyle(
                       color: EasyLoadingTheme.textColor,
@@ -101,6 +102,7 @@ class LoadingContainerState extends State<LoadingContainer> {
                     ),
                     textAlign: EasyLoadingTheme.textAlign,
                   )
+                )
                 : null,
           ].where((w) => w != null).toList(),
         ),
